@@ -145,7 +145,7 @@ def load_data(file_name=None,
     elif sheet_index is not None:
         result = reader.read_sheet_by_index(sheet_index)
     else:
-        result = reader.read_all()
+        result = reader.read_all(**keywords)
     reader.close()
     return result
 
